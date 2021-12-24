@@ -17,11 +17,13 @@ function App() {
   }
    return (
     <div className="App">
-      <h3>Count : {count}</h3>
-      <div>
+      <h1>Count : {count}</h1>
+      <div className='btnSection'>
         <button onClick={() => changeState(1)}>INCREASE</button>
         <button onClick={() => changeState(-1)}>DECREASE</button>
         <button onClick={() => changeMul(2)}>DOUBLE</button>
+        <button onClick={() => changeMul(0)}>REFRESH</button>
+
       </div>
     </div>
   );
