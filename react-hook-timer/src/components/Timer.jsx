@@ -7,7 +7,7 @@ export const Timer = () => {
             setCounter((P) => {
                 if( P === 0){
                     clearInterval(id)
-                    return 0;
+                    return 8;
                 }
                 return P-1
             })
