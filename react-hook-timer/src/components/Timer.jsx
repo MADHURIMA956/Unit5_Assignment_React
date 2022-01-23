@@ -1,15 +1,15 @@
 import {useEffect, useState} from 'react';
 
-export const Timer = () => {
-    const [counter, setCounter] = useState(8);
+export const Timer = ({start , end}) => {
+    const [counter, setCounter] = useState(start);
     useEffect(() => {
         const id = setInterval(() => {
             setCounter((P) => {
-                if( P === 0){
+                if( P >= end){
                     clearInterval(id)
-                    return 8;
+                    return "ENDED";
                 }
-                return P-1
+                return P+1
             })
         },1000);
         return ()=> {
@@ -19,7 +19,7 @@ export const Timer = () => {
     return (
         <div>
            
-            <h3>Counter is : {counter}</h3>
+            <h3>Timer is : {counter}</h3>
 
         </div>
     )
